@@ -1,0 +1,10 @@
+<h1>Webhooks received</h1>
+
+<% @webhooks.each do |w|%>
+	<p><strong>ID: </strong><%= w.webhookId%></p>
+	<p><strong>FROM: </strong><%= w.from%></p>
+	<p><strong>TO: </strong><%= w.to%></p>
+	<p><strong>BODY: </strong><%= w.body%></p>
+	<p><strong>DATE: </strong><%= w.received%></p>
+	<hr>
+<% end %>
