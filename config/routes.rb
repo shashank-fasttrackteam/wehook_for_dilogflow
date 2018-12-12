@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   # constraints subdomain: "hooks" do
   #   post '/:integration_name' => 'webhooks#receive', as: :receive_webhooks
   # end
-  post '/webhooks', to: 'webhooks#webhook', constraints: { format: 'json' }
+  post '/welcome_from_hiiiipe', to: 'webhooks#welcome_from_hiiiipe', constraints: { format: 'json' }
   get '/welcomes', to: 'welcomes#index'
   root 'webhooks#webhook'
 end

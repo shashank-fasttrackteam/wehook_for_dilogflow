@@ -4,11 +4,12 @@ class WebhooksController < ApplicationController
   def result
     # req = request.get_json(force=True)
     # action = request.get('queryResult').get('action')
-    return {'fulfillmentText': 'This is a response from webhook.'}
+    conn = Faraday.new
+    response = conn.post('http://c56972c6.ngrok.io/webhooks')
+    JSON.parse(response.body)
   end
 
-  def webhook
-    puts "-------#{result.to_json}-------------5"
+  def welcome_from_hiiiipe
     render json: result
   end
 
