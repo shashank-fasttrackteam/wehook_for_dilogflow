@@ -5,4 +5,5 @@ Rails.application.routes.draw do
   #   post '/:integration_name' => 'webhooks#receive', as: :receive_webhooks
   # end
   post '/webhooks', to: 'webhooks#webhook', constraints: { format: 'json' }
+  root 'welcome#index'
 end
