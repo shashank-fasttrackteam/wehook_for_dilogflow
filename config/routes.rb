@@ -6,5 +6,6 @@ Rails.application.routes.draw do
   # end
   post '/welcome_from_hiiiipe', to: 'webhooks#welcome_from_hiiiipe', constraints: { format: 'json' }
   get '/welcomes', to: 'welcomes#index'
-  root 'webhooks#welcome_from_hiiiipe'
+  # root 'webhooks#welcome_from_hiiiipe'
+  root 'welcomes#index'
 end
