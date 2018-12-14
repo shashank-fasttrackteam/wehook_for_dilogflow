@@ -6,7 +6,7 @@ class WebhooksController < ApplicationController
     # action = request.get('queryResult').get('action')
     conn = Faraday.new
     params = request.request_parameters
-    response = conn.post('https://18.216.180.230/webhooks', params)
+    response = conn.post('http://18.216.180.230/webhooks', params)
     JSON.parse(response.body)
   end
 
