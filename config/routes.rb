@@ -7,5 +7,5 @@ Rails.application.routes.draw do
   post '/welcome_from_hiiiipe', to: 'webhooks#welcome_from_hiiiipe', constraints: { format: 'json' }
   get '/welcomes', to: 'welcomes#index'
   # root 'webhooks#welcome_from_hiiiipe'
-  root 'welcomes#index'
+  root 'welcome#index'
 end
