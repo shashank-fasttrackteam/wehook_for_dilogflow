@@ -5,7 +5,8 @@ class WebhooksController < ApplicationController
     # req = request.get_json(force=True)
     # action = request.get('queryResult').get('action')
     conn = Faraday.new
-    response = conn.post('https://0c505ad7.ngrok.io/webhooks')
+    params = request.request_parameters
+    response = conn.post('https://0c505ad7.ngrok.io/webhooks', params)
     JSON.parse(response.body)
   end
 
